@@ -12,5 +12,9 @@
     <li><a href="/listings/<%=listing._id%>"> <%= listing.title %></a></li>
     <% }%>
     </ul>
+    
+    <form action="/listings/new" method="get">
+        <button>Add new</button>
+    </form>
 </body>
 </html>

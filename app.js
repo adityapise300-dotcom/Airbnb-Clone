@@ -47,6 +47,16 @@ app.get("/listings",async (req,res)=>{
 
 })
 
+app.get("/listings/new", (req,res)=>{
+    res.render("listings/new");
+})
+
+app.post("/listings",async (req,res)=>{
+    const newlisting = new Listing(req.body.listing);
+    await newlisting.save();
+    res.redirect("/listings");
+})
+
 app.get("/listings/:id", async (req,res)=>{
     let {id} = req.params;
     const listing = await Listing.findById(id);
