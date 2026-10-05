@@ -1,3 +1,30 @@
-body{
-    background-color: pink;
+.navbar{
+    height: 5rem;
+    background-color: aliceblue !important;
+}
+
+.navbar-nav{
+    color: black !important;
+}
+
+.fa-compass{
+    color: red;
+}
+
+footer{
+    background-color: rgb(202, 199, 199);
+    height: 4rem;
+}
+
+.f-info-socials, .f-info-links, .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info{
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
