@@ -1,17 +1,39 @@
 <% layout("/layouts/boilerplate") -%>
 <body>
-    <p>Fill the following req data for adding a ney data: </p>
-    <form action="/listings" method="POST">
-        <input type="text" name="listing[title]" placeholder="Enter title">
-        <br><br>
-        <input type="text" name="listing[description]" placeholder="Enter description">
-        <br><br>
-        <input type="number" name="listing[price]" placeholder="Enter price">
-        <br><br>
-        <input type="text" name="listing[location]" placeholder="Enter location">
-        <br><br>
-        <input type="text" name="listing[country]" placeholder="Enter country">
-        <button>Submit</button>
-    </form>
+    <div class="row">
+        <div class="col-8 offset-2">
+             <form action="/listings" method="POST">
+                    <br>
+                    <h3>Fill the following data: </h3>
+                    <br>
+                    <form action="/listings" method="POST">
 
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input class="form-control" type="text" name="listing[title]" placeholder="Enter title">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" name="listing[description]" placeholder="Enter description">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input class="form-control"  type="number" name="listing[price]" placeholder="Enter price">
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input class="form-control" type="text" name="listing[location]" placeholder="Enter location">
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input class="form-control"type="text" name="listing[country]" placeholder="Enter country">
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+                <br><br>
+             </form>
+
+        </div>
+    </div>
+   
+    
 </body>
