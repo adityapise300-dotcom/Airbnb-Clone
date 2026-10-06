@@ -1,19 +1,38 @@
 <% layout("/layouts/boilerplate") -%>
 <body>
-    <p>Here is your complete information regarding this place: </p>
-    <ul>
-        <li><%= listing.title %></li>
-        <li><%= listing.description %></li>
-        <li>₹<%= listing.price.toLocaleString("en-IN") %></li>
-        <li><%= listing.location %></li>
-        <li><%= listing.country %></li>
-    </ul>
 
-    <a href="/listings/<%=listing._id%>/edit">Edit</a>
+    <div class="row">
+        <div class="col-9 offset-2">
+            <br>
+            <h3><%= listing.title %></h3>
+            <br>
+        </div>
+      
+        <div class="col-8 offset-2">
+            <div class="card card-show" style="width: 18rem;">
+            <img src="<%= listing.image.url %>" class="card-img-top img-show" alt="listing_image">
+                <div class="card-body">
+                   <ul>
+                        <h5><b><%= listing.description %></b></h5>
+                        <br>
+                        <li><b>₹<%= listing.price.toLocaleString("en-IN") %></b></li>
+                        <li><b><%= listing.location %></b></li>
+                        <li><b><%= listing.country %></b></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <br><br>
+    <div class="row">
+        <div class="col-6 ">
+            <a href="/listings/<%=listing._id%>/edit">Edit</a>
+        </div>
+        <div class="col-5">
+            <form method="POST" action="/listings/<%=listing._id%>?_method=Delete">
+                <button>Delete</button>
+            </form>
+        </div>
+    </div>
 
-    <form method="POST" action="/listings/<%=listing._id%>?_method=Delete">
-        <button>Delete</button>
-    </form>
 </body>

@@ -64,3 +64,11 @@ footer{
     opacity: 60% !important;
     background-color: white !important;
 }
+
+.card-show{
+    width: 100% !important;
+}
+
+.img-show{
+    height: 40vh !important;
+}
