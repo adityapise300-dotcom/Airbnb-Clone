@@ -1,16 +1,36 @@
 <% layout("/layouts/boilerplate") -%>
+
 <body>
-    <p>You can edit the data by filling the following: </p>
-    <form method="POST" action="/listings/<%=listing._id%>?_method=PUT">
-        <input type="text" name="listing[title]" value="<%=listing.title%>">
-        <br><br>
-        <input type="text" name="listing[description]" value="<%=listing.description%>">
-        <br><br>
-        <input type="number" name="listing[price]" value="<%=listing.price%>">
-        <br><br>
-        <input type="text" name="listing[location]" value="<%=listing.location%>">
-        <br><br>
-        <input type="text" name="listing[country]" value="<%=listing.country%>">
-        <button>Edit</button>
-    </form>
+    <div class="row">
+        <div class="col-8 offset-2">
+             <form method="POST" action="/listings/<%=listing._id%>?_method=PUT">
+                    <br>
+                    <h3>Edit the Details: </h3>
+                    <br>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input class="form-control" type="text" name="listing[title]" value="<%=listing.title%>">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input class="form-control"type="text" name="listing[description]" value="<%=listing.description%>">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input class="form-control" type="number" name="listing[price]" value="<%=listing.price%>">
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input class="form-control" type="text" name="listing[location]" value="<%=listing.location%>">
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input class="form-control" type="text" name="listing[country]" value="<%=listing.country%>">
+                </div>
+                <button type="submit" class="btn btn-primary">Edit</button>
+                <br><br>
+             </form>
+
+        </div>
+    </div>
 </body>
